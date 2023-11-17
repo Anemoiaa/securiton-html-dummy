@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .text-heading {
+        @apply text-[39px] lg:text-[48px] lg:leading-[63px] lg:tracking-[0.93px] leading-[51px] tracking-[0.78px] font-normal;
+    }
+
+    .text-subheading {
+        @apply text-[31px] leading-[41px] tracking-[0.62px] lg:text-[39px] lg:leading-[41px] lg:tracking-[0.78px] font-normal;
+    }
+
+    .text-body {
+        @apply text-[20px] leading-[26px] tracking-[0.4px] lg:text-[25px] lg:leading-[33px] lg:tracking-[0.5px] font-normal;
+    }
+
+    .text-caption {
+        @apply text-[20px] leading-[1.2] tracking-[1px] lg:text-[20px] lg:leading-[26px] lg:tracking-[0.4px] font-normal;
+    }
+
+    .text-small {
+        @apply text-[14px] leading-[18px] tracking-[0.27px] lg:text-[16px] lg:leading-[21px] lg:tracking-[0.31px] font-normal;
+    }
+
+    .text-button {
+        @apply text-[16px] leading-[21px] tracking-[0.31px] lg:text-[20px] lg:leading-[26px] lg:tracking-[0.4px] font-medium;
+    }
+
+    .text-user {
+        @apply text-base tracking-[0.32px] text-black-200
+    }
+}
+
+/* Font style inter */
+* {
+    font-family: "Inter", sans-serif;
+    font-size: 400;
+}
+
+.card {
+    position: relative
+}
+
+.content {
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.card:hover .content {
+    transform: rotateY(180deg);
+    transition: transform 0.5s;
+}
+
+.front,
+.back {
+    position: absolute;
+    line-height: 300px;
+    font-size: 60px;    
+    border-radius: 5px;
+    backface-visibility: hidden;
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none; /* for WebKit (Chrome, Safari, etc.) */
+}
+.hide-scrollbar {
+    -ms-overflow-style: none; /* for IE and Edge */
+    scrollbar-width: none; /* for Firefox */
+}
