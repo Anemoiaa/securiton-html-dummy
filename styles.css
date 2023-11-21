@@ -50,6 +50,8 @@
 @layer components {
     .burger-menu {
         /* Add hidden in HTML */
+        display: flex;
+        flex-direction: column;
         width: 100%;
         min-height: 100vh;
         position: fixed;
@@ -86,6 +88,7 @@
     @media(min-width: 1399px){
         .burger-menu {
             position: static;
+            flex-direction: row;
             width: 100%;
             min-height: 0px;
             height: 100%;
