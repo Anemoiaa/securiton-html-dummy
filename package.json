@@ -13,6 +13,7 @@
     "dev": "tailwindcss -i styles.css -o css/main.css -w"
   },
   "dependencies": {
+    "flowbite": "^2.2.0",
     "jquery": "^3.7.1"
   }
 }
