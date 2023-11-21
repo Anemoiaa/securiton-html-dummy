@@ -41,6 +41,7 @@
     
 }
 
+
 /* Font style inter */
 * {
     font-family: "Inter", sans-serif;
@@ -62,6 +63,10 @@
         @apply bg-lightgray-100 text-green text-small;
         max-height: 100vh;
         overflow: auto;
+    }
+
+    .burger-menu li.open button img {
+        display: none;
     }
 
     .burger-menu li button {

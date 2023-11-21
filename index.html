@@ -1068,47 +1068,84 @@
 
   <!-- Footer -->
   <footer class="bg-black-300">
-    <div class="mx-auto max-w-[335px] sm:max-w-[687px] lg:max-w-[1111px]">
-      <div class="pt-[67px] sm:px-10 lg:px-0">
-        <img src="./icons/logo.svg" alt="logo" />
-      </div>
-      <div class="text-user mt-[26px] text-white">
-        <strong>Securiton AG</strong>
-        <br />
-        <span>
-          Alarm- und Sicherheitssysteme
+    <div class="flex justify-between py-[62px] mx-auto max-w-[335px] sm:max-w-[687px] lg:max-w-[1111px]">
+      <div>
+        <div class="sm:px-10 lg:px-0">
+          <img src="./icons/logo.svg" alt="logo" />
+        </div>
+        <div class="text-user mt-[26px] text-white">
+          <strong>Securiton AG</strong>
           <br />
-          Vertrieb Schweiz
-          <br />
-          Alpenstrasse 20
-          <br />
-          Postfach 127
-          <br />
-          CH-3052 Zollikofen
-        </span>
-      </div>
-      <!-- Contact -->
-      <div class="mt-6 flex flex-col gap-2">
-        <div class="flex items-center gap-2">
-          <div class="relative flex h-8 w-8 items-center justify-center rounded-full bg-white">
-            <img src="./icons/phone_icon_black.svg" alt="phone icon" />
+          <span>
+            Alarm- und Sicherheitssysteme
+            <br><br>
+            Hauptsitz <br>
+            Alpenstrasse 20 <br>
+            Postfach 127 <br>
+            CH-3052 Zollikofen <br>
+          </span>
+        </div>
+        <!-- Contact -->
+        <div class="mt-6 flex flex-col gap-2">
+          <div class="flex items-center gap-2">
+            <div class="relative flex h-8 w-8 items-center justify-center rounded-full bg-white">
+              <img src="./icons/phone_icon_black.svg" alt="phone icon" />
+            </div>
+            <div class="text-user text-white">
+              <a href="tel:+41589105050">+41 58 910 50 50</a>
+            </div>
           </div>
-          <div class="text-user text-white">
-            <a href="tel:+41589105050">+41 58 910 50 50</a>
+          <div class="flex items-center gap-2">
+            <div class="relative flex h-8 w-8 items-center justify-center rounded-full bg-white">
+              <img src="./icons/mail_icon_black.svg" alt="Mail icon" />
+            </div>
+            <div class="text-user text-white">
+              <a href="mailto:info@securiton.ch">info@securiton.ch</a>
+            </div>
           </div>
         </div>
-        <div class="flex items-center gap-2">
-          <div class="relative flex h-8 w-8 items-center justify-center rounded-full bg-white">
-            <img src="./icons/mail_icon_black.svg" alt="Mail icon" />
-          </div>
-          <div class="text-user text-white">
-            <a href="mailto:info@securiton.ch">info@securiton.ch</a>
+        <!-- Soc meida -->
+        <div class="mt-16">
+          <h2 class="text-small font-bold text-white">Join us on Social Media</h2>
+          <div class="mt-6 flex gap-2">
+            <a class="flex" href="#">
+              <img class="lol" src="./icons/linkedin_white.svg" alt="xing logo">
+            </a>
+            <a class="flex" href="#">
+              <img src="./icons/xing_white.svg" alt="xing logo">
+            </a>
+            <a class="flex" href="#">
+              <img src="./icons/yt_white.svg" alt="xing logo">
+            </a>
           </div>
         </div>
+      </div>
+      <div class="pt-[62px] max-w-[350px]">
+        <h2 class="text-small font-bold text-white">Anmeldung Newsletter</h2>
+        <p class="mt-2 block text-small text-white">
+          Lorem ipsum dolor sit amet, id putent <br> 
+          fastidii per, ne eos dolores cotidieque. Cu <br> 
+          posse legendos recteque pri.
+        </p>
+        <input class="mt-6 w-full h-14 border-0 text-black-100 text-lg placeholder:text-[#848D94] placeholder:uppercase" type="text" placeholder="Ihre Email Adresse">
+        <button class="mt-6 px-8 py-[18px] border border-white text-white uppercase">Eintragen</button>
       </div>
     </div>
-    <div class="mt-20 bg-black-200 px-5 py-6 sm:px-10 lg:px-0">
-      <div class="text-user text-white">Copyright © 2023 Your Company Name</div>
+    <div class="bg-black-200 px-5 py-6 sm:px-10 lg:px-0">
+      <div class="flex justify-between mx-auto max-w-[335px] sm:max-w-[687px] lg:max-w-[1111px] text-user text-white">
+        <ul class="flex gap-12">
+          <li>
+            <a href="#">Impressum</a>
+          </li>
+          <li>
+            <a href="#">AGB</a>
+          </li>
+          <li>
+            <a href="#">Datenschutzerklärung</a>
+          </li>
+        </ul>
+        <span>Copyrights © 2023 All Rights Reserved Securiton AG</span>
+      </div>
     </div>
   </footer>
 
@@ -1116,8 +1153,8 @@
   <div id="screen-size" class="fixed bottom-5 right-2 w-min rounded-lg bg-slate-400 p-1">
     120px
   </div>
+  <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
   <script type="module" src="./js/main.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.1.1/flowbite.min.js"></script>
 </body>
 
 </html>
