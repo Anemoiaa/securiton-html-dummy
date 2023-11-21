@@ -28,15 +28,82 @@
     }
 
     .text-user {
-        @apply text-base tracking-[0.32px] text-black-200
+        @apply text-base tracking-[0.32px] text-black-200 font-bold
     }
+
+    .menu-hover {
+        @apply lg:border-b-[5px] lg:border-transparent cursor-pointer lg:hover:box-content lg:hover:border-yellow-100;
+    }
+    .menu-hover:hover button {
+        text-shadow: 0 0 1px #fff, 0 0 1px #fff;
+    }
+    
+    
 }
 
 /* Font style inter */
 * {
     font-family: "Inter", sans-serif;
-    font-size: 400;
+    font-weight: 400;
 }
+
+@layer components {
+    .burger-menu {
+        /* Add hidden in HTML */
+        width: 100%;
+        min-height: 100vh;
+        position: fixed;
+        left: 0;
+        top: 56px;
+        padding: 26px 22px 72px 20px;
+        z-index: 99;
+        @apply bg-lightgray-100 text-green text-small;
+        max-height: 100vh;
+        overflow: auto;
+    }
+
+    .burger-menu li button {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 24px;
+        border-bottom: 1px solid #E3E3D9;
+    }
+
+    .burger-menu li:not(:first-child) button {
+        padding-top: 25px;
+    }
+      
+
+    @media(min-width: 767px) {
+        .burger-menu {
+            width: 50%;
+            left: auto;
+            right: 0;
+        }
+    }
+
+    @media(min-width: 1399px){
+        .burger-menu {
+            position: static;
+            width: 100%;
+            min-height: 0px;
+            height: 100%;
+            /* add flex from tailinwd in HTML */
+            justify-content: space-between;
+            gap: 24px;
+            padding: 0;
+            background-color: transparent;
+            @apply text-white;
+        }
+        .burger-menu li button {
+            padding: 0 !important;
+            border: none;
+        }
+    }
+
+}
+
 
 .card {
     position: relative

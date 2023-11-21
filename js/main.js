@@ -1,4 +1,9 @@
+import { initBurger } from "./burger.js";
+
 document.addEventListener("DOMContentLoaded", function () {
+
+
+    initBurger();
 
     const screenSize = document.getElementById("screen-size");
 
