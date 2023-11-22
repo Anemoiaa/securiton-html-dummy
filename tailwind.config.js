@@ -21,6 +21,7 @@ module.exports = {
         lightgray: {
           100: "#F1F1EC",
           200: "#f8f8f5",
+          300: "#848D94",
         },
         // 1E1E1E color
         black: {
