@@ -8,11 +8,11 @@
     }
 
     .text-subheading {
-        @apply text-[31px] leading-[41px] tracking-[0.62px] lg:text-[39px] lg:leading-[41px] lg:tracking-[0.78px] font-normal;
+        @apply text-[31px] leading-[41px] tracking-[0.62px] sm:text-[39px] lg:leading-[41px] lg:tracking-[0.78px] font-normal;
     }
 
     .text-body {
-        @apply text-[20px] leading-[26px] tracking-[0.4px] lg:text-[25px] lg:leading-[33px] lg:tracking-[0.5px] font-normal;
+        @apply text-[20px] leading-[26px] tracking-[0.4px] sm:text-[25px] lg:leading-[33px] lg:tracking-[0.5px] font-normal;
     }
 
     .text-caption {
