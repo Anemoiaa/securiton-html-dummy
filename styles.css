@@ -36,7 +36,7 @@
     }
 
     .text-article-title {
-        @apply text-[31px] leading-[1.32] text-black-200 font-normal
+        @apply text-[25px] lg:text-[31px] leading-[1.32] text-black-200 font-normal
     }
 
     .text-article-category {
