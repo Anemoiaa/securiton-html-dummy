@@ -35,7 +35,11 @@
         @apply text-[14px] text-lightgray-300 font-normal
     }
 
-    .text-article-title {
+    .text-gray-btn {
+        @apply text-[14px] leading-[1.5] tracking-[0.7px] text-lightgray-300
+    }
+
+    .text-article-title, .text-subtitle {
         @apply text-[25px] lg:text-[31px] leading-[1.32] text-black-200 font-normal
     }
 
@@ -43,9 +47,14 @@
         @apply text-[14px] tracking-[1.4px] text-black-200 uppercase font-normal
     }
 
+    .text-small-title {
+        @apply text-[25px] leading-[1.32] tracking-[0.5px] text-black-100
+    }
+
     .menu-hover {
         @apply lg:border-b-[5px] lg:border-transparent cursor-pointer lg:hover:box-content lg:hover:border-yellow-100;
     }
+
     .menu-hover:hover button {
         text-shadow: 0 0 1px #fff, 0 0 1px #fff;
     }   
@@ -123,6 +132,9 @@
 
 }
 
+.black-filter {
+    filter: brightness(0%);
+}
 
 .card {
     position: relative
@@ -157,4 +169,12 @@
 .hide-scrollbar {
     -ms-overflow-style: none; /* for IE and Edge */
     scrollbar-width: none; /* for Firefox */
+}
+
+.swiper-button-prev::after {
+    content: "";
+}
+
+.swiper-button-next::after {
+    content: "";
 }

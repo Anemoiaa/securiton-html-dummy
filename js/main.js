@@ -1,9 +1,11 @@
 import { initBurger } from "./burger.js";
+import { initAccordions } from "./accordion.js";
 
 document.addEventListener("DOMContentLoaded", function () {
 
 
     initBurger();
+    initAccordions();
 
     const screenSize = document.getElementById("screen-size");
 
