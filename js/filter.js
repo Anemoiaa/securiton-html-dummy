@@ -1,5 +1,10 @@
 function initFilter() {
   const filterContainer = document.querySelector('#filter');
+  
+  if(!filterContainer) {
+    return
+  }
+
   const width = window.innerWidth;
   let activeFilter = 'pc';
 
