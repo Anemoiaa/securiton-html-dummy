@@ -1,6 +1,7 @@
 import { initBurger } from "./burger.js";
 import { initAccordions } from "./accordion.js";
 import { initModals } from "./modal.js";
+import { initFilter } from "./filter.js";
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -8,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     initBurger();
     initAccordions();
     initModals();
+    initFilter();
 
     const screenSize = document.getElementById("screen-size");
 

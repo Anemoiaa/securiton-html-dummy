@@ -71,7 +71,7 @@
 html {
     scrollbar-width: none;
 }
-  
+
 
 @layer components {
     .burger-menu {
@@ -141,6 +141,26 @@ html {
 .black-filter {
     filter: brightness(0%);
 }
+
+.white-filter {
+    filter: brightness(0) invert(1);
+}
+
+.filter-select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("../icons/arow_down.svg");
+}
+
+.filter-select:focus {
+    outline: none !important;
+    border: none !important;
+}
+
+select option:hover {
+    @apply bg-red-500; /* Replace with the desired background color class */
+}
+
 
 .blured-backdrop {
     position: fixed;
