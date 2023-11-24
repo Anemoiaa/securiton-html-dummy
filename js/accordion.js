@@ -1,5 +1,8 @@
 function initAccordions() {
     const accordionItems = document.querySelectorAll('.accordion-item');
+    if(!accordionItems.length) {
+        return;
+    }
 
     accordionItems.forEach(item => {
         const header = item.querySelector('.accordion-header');
