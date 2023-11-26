@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link href="../css/main.css" rel="stylesheet" />
+  <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+  <title>Securiton | News Übersicht</title>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="relative flex h-14 items-center justify-between">
+    <div
+      class="flex h-full w-full items-center justify-between bg-green pl-6 pr-5 lg:px-6 xl:pl-[144px] xl:pr-16 2xl:pl-[264px] 2xl:pr-[124px]">
+      <!-- Logo -->
+      <div>
+        <img src="../icons/logo.svg" alt="logo" />
+      </div>
+      <div class="flex items-center self-stretch">
+        <!-- Burger menu -->
+        <button class="burger-btn flex items-center lg:hidden">
+          <span
+            class="mr-[7px] hidden text-sm font-normal uppercase leading-[1.2] tracking-[0.7px] text-white md:block lg:hidden">
+            menu
+          </span>
+          <img src="../icons/burger_menu_closed.svg" alt="burger menu icon" />
+        </button>
+        <button class="burger-btn hidden flex items-center lg:hidden">
+          <img src="../icons/burger_menu_open.svg" alt="burger menu icon" />
+        </button>
+        <!-- Menu items -->
+        <ul class="burger-menu hidden lg:flex">
+          <li class="flex items-center menu-hover">
+            <button class="uppercase">
+              <span>
+                Produkte
+              </span>
+              <img class="lg:hidden" src="../icons/arrow-r.svg" alt="arrow right">
+            </button>
+          </li>
+          <li class="flex items-center menu-hover">
+            <button class="uppercase">
+              <span>Dienstleistungen</span>
+              <img class="lg:hidden" src="../icons/arrow-r.svg" alt="arrow right">
+            </button>
+          </li>
+          <li class="flex items-center menu-hover" id="mega-menu-filter-btn"
+            data-dropdown-toggle="mega-menu-dropdown-branchen">
+            <button class="uppercase">
+              <span>Branchen & anwendungen</span>
+              <img class="lg:hidden" src="../icons/arrow-r.svg" alt="arrow right">
+            </button>
+            <div id="mega-menu-dropdown-branchen" class="relative !top-[-10px] z-20 hidden w-full bg-lightgray-100">
+              <div class="pt-10 pb-12 w-full">
+                <div class="px-5 lg:px-0 lg:mx-auto max-w-[1111px] flex flex-col lg:flex-row lg:gap-[95px]"
+                  aria-labelledby="mega-menu-dropdown-branchen-btn">
+                  <div>
+                    <h2 class="text-small font-semibold text-green">BRANCHEN</h2>
+                    <ul class="mt-6 flex flex-col gap-4 text-small text-black-200">
+                      <li class="hover:text-green"><a href="#">Hotels</a></li>
+                      <li class="hover:text-green"><a href="#">Casinos</a></li>
+                      <li class="hover:text-green"><a href="#">Handel</a></li>
+                      <li class="hover:text-green"><a href="#">Hotels</a></li>
+                      <li class="hover:text-green"><a href="#">Informatik</a></li>
+                      <li class="hover:text-green"><a href="#">Kommunikation</a></li>
+                      <li class="hover:text-green"><a href="#">Lagerhäuser</a></li>
+                      <li class="hover:text-green"><a href="#">Nahrungsmittelindustire</a></li>
+                      <li class="hover:text-green"><a href="#">Pharma & Chemie</a></li>
+                    </ul>
+                    <a class="mt-[40px] flex w-full items-center gap-4 text-base font-normal uppercase leading-[19px] tracking-[1.6px] text-green"
+                      href="#">
+                      alle branchen
+                      <img src="../icons/arrow_right.svg" alt="arrow icon">
+                    </a>
+                  </div>
+
+                  <div>
+                    <h2 class="text-small font-semibold text-green">ANWENDUNGEN</h2>
+                    <ul class="mt-6 flex flex-col gap-4 text-small text-black-200">
+                      <li class="hover:text-green"><a href="#">Museen</a></li>
+                      <li class="hover:text-green"><a href="#">Öffentliche Gebäude</a></li>
+                      <li class="hover:text-green"><a href="#">Post</a></li>
+                      <li class="hover:text-green"><a href="#">Tunnels</a></li>
+                      <li class="hover:text-green"><a href="#">Universitäten</a></li>
+                      <li class="hover:text-green"><a href="#">Verkehr</a></li>
+                      <li class="hover:text-green"><a href="#">Mobiler Objektschutz</a></li>
+                      <li class="hover:text-green"><a href="#">Stadion</a></li>
+                      <li class="hover:text-green"><a href="#">Forschung</a></li>
+                    </ul>
+                    <a class="mt-[40px] flex w-full items-center gap-4 text-base font-normal uppercase leading-[19px] tracking-[1.6px] text-green"
+                      href="#">
+                      alle anwendungen
+                      <img src="../icons/arrow_right.svg" alt="arrow icon">
+                    </a>
+                  </div>
+
+                  <div class="hidden lg:block relative max-w-[355px] max-h-[355px] ml-auto mr-[-50px]">
+                    <img class="w-full h-full object-cover" src="../images/branchen-and-anwendungen.png"
+                      alt="Scientist looks into a microscope">
+                    <span class="absolute bottom-0 w-full h-16 bg-green mix-blend-multiply">
+                    </span>
+                    <h2 class="absolute text-[14px] bottom-[12px] pl-4 text-small uppercase text-white">
+                      Lorem ipsum dolor sit amet, etetur sadipscing elitr
+                    </h2>
+                  </div>
+
+                </div>
+              </div>
+          </li>
+          <li class="flex items-center menu-hover">
+            <button class="uppercase">
+              <span>Über Securiton</span>
+              <img class="lg:hidden" src="../icons/arrow-r.svg" alt="arrow right">
+            </button>
+          </li>
+
+          <div class="md:hidden lg:hidden mt-auto pt-[104px]">
+
+            <div class="flex justify-evenly items-center">
+              <a href="#" class="w-12">
+                <img class="w-full" src="../icons/login.svg" alt="login icon" />
+              </a>
+              <a href="#" class="w-18">
+                <img class="w-full" src="../icons/support_with_shadow.svg" alt="support icon" />
+              </a>
+              <a href="#" class="w-12">
+                <img class="w-full" src="../icons/sprache.svg" alt="sprache icon" />
+              </a>
+            </div>
+
+            <div class="mt-6 relative">
+              <input class="w-full h-14 border-0 text-black-100 text-lg" type="text">
+              <button class="absolute right-[10px] top-[50%] transform translate-y-[-50%] w-6 h-6">
+                <img class="w-full h-full" src="../icons/search.svg" alt="search icon">
+              </button>
+            </div>
+
+            <div class="mt-6 flex justify-center gap-4">
+              <a class="flex" href="#">
+                <img src="../icons/linkedin.svg" alt="xing logo">
+              </a>
+              <a class="flex" href="#">
+                <img src="../icons/xing.svg" alt="xing logo">
+              </a>
+              <a class="flex" href="#">
+                <img src="../icons/yt.svg" alt="xing logo">
+              </a>
+            </div>
+          </div>
+
+        </ul>
+      </div>
+    </div>
+    <!-- Buttons -->
+    <div class="hidden h-full items-center gap-2 bg-white px-6 md:flex">
+      <button class="mr-3">
+        <img src="../icons/search.svg" alt="search icon" />
+      </button>
+      <a href="#">
+        <img src="../icons/support.svg" alt="support icon" />
+      </a>
+      <a href="#">
+        <img src="../icons/login.svg" alt="login icon" />
+      </a>
+      <a href="#">
+        <img src="../icons/sprache.svg" alt="sprache icon" />
+      </a>
+    </div>
+    <div class="absolute -bottom-px left-0 h-px w-full bg-[#F5F5F5]"></div>
+  </nav>
+
+  <main>
+    <div class="w-full h-[441px] sm:h-[375px] lg:h-[600px]">
+      <img class="w-full h-full object-cover" src="../images/s-center.jpeg" alt="">
+    </div>
+
+    <div class="mx-auto mt-0 lg:mt-6 max-w-[1111px]">
+      <div
+        class="path hidden max-w-[375px] sm:max-w-[687px] lg:max-w-full mx-auto lg:flex items-center gap-4 text-path">
+        <a href="/">
+          <img src="../icons/home.svg" alt="home">
+        </a>
+        <img src="../icons/path_arrow.svg" alt="right arrow">
+        <a href="#">Über Securiton</a>
+        <img src="../icons/path_arrow.svg" alt="right arrow">
+        <a href="#">Service Center</a>
+      </div>
+    </div>
+
+    <div class="mx-auto mt-10 lg:mt-20 mb-[120px] lg:mb-[152px] max-w-[1111px]">
+
+      <section class="mx-auto max-w-[335px] sm:max-w-[687px] lg:max-w-full">
+        <h2 class="text-heading text-green">Service Center</h2>
+        <div class="mt-4 h-1 w-[72px] bg-yellow-100 sm:mt-[18px] lg:mt-4"></div>
+        <p class="mt-6 text-body text-black-100">
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+          labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
+          duo dolores et ea rebum.
+        </p>
+
+      </section>
+
+      <section class="mx-auto mt-10 lg:mt-20 max-w-[335px] sm:mt-[55px] sm:max-w-[687px] lg:mt-[120px] lg:max-w-full">
+        <div class="text-subheading max-w-[481px] text-green">
+          Unsere Hubs
+        </div>
+
+        <!-- Cards Mobile -->
+        <div class="mt-4 grid w-full grid-cols-1 gap-2 sm:mt-6 sm:grid-cols-3 sm:gap-5 lg:mt-8 lg:hidden lg:gap-[31px]">
+          <!-- Card 1 -->
+          <a href="#"
+            class="flex w-full items-center gap-5 bg-lightgray-200 px-[19px] py-3 sm:h-[216px] sm:w-[216px] sm:flex-col sm:justify-center sm:gap-6 lg:h-[350px] lg:w-[350px]">
+            <img src="../icons/Ebene_1.svg" class="w-14 sm:w-[72px] lg:w-[120px]" alt="icon" />
+            <div class="text-caption uppercase text-black-200">
+              My Securiton
+            </div>
+          </a>
+          <!-- Card 2 -->
+          <a href="#"
+            class="flex w-full items-center gap-5 bg-lightgray-200 px-[19px] py-3 sm:h-[216px] sm:w-[216px] sm:flex-col sm:justify-center sm:gap-6 lg:h-[350px] lg:w-[350px]">
+            <img src="../icons/Ebene_6.svg" class="w-14 sm:w-[72px] lg:w-[120px]" alt="icon" />
+            <div class="text-caption uppercase text-black-200">
+              Partner Login
+            </div>
+          </a>
+          <!-- Card 3 -->
+          <a href="#"
+            class="flex w-full items-center gap-5 bg-lightgray-200 px-[19px] py-3 sm:h-[216px] sm:w-[216px] sm:flex-col sm:justify-center sm:gap-6 lg:h-[350px] lg:w-[350px]">
+            <img src="../icons/Ebene_7.svg" class="w-14 sm:w-[72px] lg:w-[120px]" alt="icon" />
+            <div class="text-caption uppercase text-black-200">Dongle Management</div>
+          </a>
+          <!-- Card 4 -->
+          <a href="#"
+            class="flex w-full items-center gap-5 bg-lightgray-200 px-[19px] py-3 sm:h-[216px] sm:w-[216px] sm:flex-col sm:justify-center sm:gap-6 lg:h-[350px] lg:w-[350px]">
+            <img src="../icons/Ebene_8.svg" class="w-14 sm:w-[72px] lg:w-[120px]" alt="icon" />
+            <div class="text-caption uppercase text-black-200">Störungsmeldung</div>
+          </a>
+        </div>
+
+        <!-- Cards Desktop -->
+        <div class="mt-4 hidden grid-cols-1 gap-2 sm:mt-6 sm:grid-cols-3 sm:gap-5 md:gap-[31px] lg:mt-8 lg:grid">
+          <!-- Card 1 -->
+          <a class="card sm:h-[216px] sm:w-[216px] lg:h-[350px] lg:w-[350px]" href="#">
+            <div class="content">
+              <div
+                class="front flex w-full items-center gap-5 bg-lightgray-200 px-[19px] py-3 sm:h-[216px] sm:w-[216px] sm:flex-col sm:justify-center sm:gap-6 lg:h-[350px] lg:w-[350px]">
+                <img src="../icons/Ebene_1.svg" class="w-14 sm:w-[72px] md:w-[120px]" alt="icon" />
+                <h3 class="text-caption uppercase text-black-200">
+                  My Securiton
+                </h3>
+              </div>
+              <div class="back flex flex-col bg-green p-8 sm:h-[216px] sm:w-[216px] lg:h-[350px] lg:w-[350px]">
+                <h3 class="text-xl font-normal uppercase leading-[26px] tracking-[1px] text-white">
+                  My Securiton
+                </h3>
+                <div class="mt-1 h-[5px] w-[90px] bg-yellow-100"></div>
+                <div class="prose mt-[32px] text-base font-normal tracking-[0.32px] text-white">
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                  diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                  aliquyam erat, sed diam voluptua.
+                </div>
+                <div class="mt-auto text-base font-normal uppercase leading-[1.2] tracking-[1.6px] text-white">
+                  MEHR ERFAHREN
+                </div>
+              </div>
+            </div>
+          </a>
+          <!-- Card 2 -->
+          <a href="#" class="card sm:h-[216px] sm:w-[216px] lg:h-[350px] lg:w-[350px]">
+            <div class="content">
+              <div
+                class="front flex w-full items-center gap-5 bg-lightgray-200 px-[19px] py-3 sm:h-[216px] sm:w-[216px] sm:flex-col sm:justify-center sm:gap-6 lg:h-[350px] lg:w-[350px]">
+                <img src="../icons/Ebene_6.svg" class="w-14 sm:w-[72px] md:w-[120px]" alt="icon" />
+                <div class="text-caption uppercase text-black-200">
+                  Partner Login
+                </div>
+              </div>
+              <div class="back flex flex-col bg-green p-8 sm:h-[216px] sm:w-[216px] lg:h-[350px] lg:w-[350px]">
+                <div class="text-xl font-normal uppercase leading-[26px] tracking-[1px] text-white">
+                  Partner Login
+                </div>
+                <div class="mt-1 h-[5px] w-[90px] bg-yellow-100"></div>
+                <div class="mt-[32px] text-base font-normal tracking-[0.32px] text-white">
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                  diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                  aliquyam erat, sed diam voluptua.
+                </div>
+                <div class="mt-auto text-base font-normal uppercase leading-[1.2] tracking-[1.6px] text-white">
+                  MEHR ERFAHREN
+                </div>
+              </div>
+            </div>
+          </a>
+          <!-- Card 3 -->
+          <a href="#" class="card sm:h-[216px] sm:w-[216px] lg:h-[350px] lg:w-[350px]">
+            <div class="content">
+              <div
+                class="front flex w-full items-center gap-5 bg-lightgray-200 px-[19px] py-3 sm:h-[216px] sm:w-[216px] sm:flex-col sm:justify-center sm:gap-6 lg:h-[350px] lg:w-[350px]">
+                <img src="../icons/Ebene_7.svg" class="w-14 sm:w-[72px] md:w-[120px]" alt="icon" />
+                <h3 class="text-caption uppercase text-black-200">
+                  Dongle Management
+                </h3>
+              </div>
+              <div class="back flex flex-col bg-green p-8 sm:h-[216px] sm:w-[216px] lg:h-[350px] lg:w-[350px]">
+                <h3 class="text-xl font-normal uppercase leading-[26px] tracking-[1px] text-white">
+                  Dongle Management
+                </h3>
+                <div class="mt-1 h-[5px] w-[90px] bg-yellow-100"></div>
+                <div class="prose mt-[32px] text-base font-normal tracking-[0.32px] text-white">
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                  diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                  aliquyam erat, sed diam voluptua.
+                </div>
+                <div class="mt-auto text-base font-normal uppercase leading-[1.2] tracking-[1.6px] text-white">
+                  MEHR ERFAHREN
+                </div>
+              </div>
+            </div>
+          </a>
+          <!-- Card 4 -->
+          <a href="#" class="card sm:h-[216px] sm:w-[216px] lg:h-[350px] lg:w-[350px]">
+            <div class="content">
+              <div
+                class="front flex w-full items-center gap-5 bg-lightgray-200 px-[19px] py-3 sm:h-[216px] sm:w-[216px] sm:flex-col sm:justify-center sm:gap-6 lg:h-[350px] lg:w-[350px]">
+                <img src="../icons/Ebene_8.svg" class="w-14 sm:w-[72px] md:w-[120px]" alt="icon" />
+                <h3 class="text-caption uppercase text-black-200">Störungsmeldung</h3>
+              </div>
+              <div class="back flex flex-col bg-green p-8 sm:h-[216px] sm:w-[216px] lg:h-[350px] lg:w-[350px]">
+                <h3 class="text-xl font-normal uppercase leading-[26px] tracking-[1px] text-white">
+                  Störungsmeldung
+                </h3>
+                <div class="mt-1 h-[5px] w-[90px] bg-yellow-100"></div>
+                <div class="prose mt-[32px] text-base font-normal tracking-[0.32px] text-white">
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                  diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                  aliquyam erat, sed diam voluptua.
+                </div>
+                <div class="mt-auto text-base font-normal uppercase leading-[1.2] tracking-[1.6px] text-white">
+                  MEHR ERFAHREN
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+    </div>
+
+    <section class="mt-[56px] lg:mt-[120px] max-w-full">
+      <h3 class="mx-auto max-w-[335px] sm:max-w-[687px] lg:max-w-[1111px] text-subheading text-green">Kontaktieren Sie unseren Brandschutzexperten</h3>
+      <div class="mt-6 lg:mt-8 w-full bg-lightgray-100">
+        <div class="mx-auto py-7 lg:py-14 flex flex-col items-center sm:flex-row max-w-[335px] sm:max-w-[687px] lg:max-w-[1111px]">
+          <img class="inline w-[220px] h-[220px] rounded-full" src="../images/bilder-1.png" alt="man with planshet in hands">
+          <div class="sm:ml-[65px]">
+            <h4 class="mt-8 sm:mt-0 text-article-title tracking-[0.62px]">
+              Haben sie Fragen?
+            </h4>
+            <div class="mt-2 text-[20px] lg:text-[25px] text-black-100 leading-[1.3] tracking-[0.5px]">Lassen Sie sich von unseren Experten Beraten</div>
+            <div class="mt-[27px] lg:mt-14 flex flex-col lg:flex-row gap-8">
+              <div class="flex items-center gap-2">
+                <a href="mailto:brandschutz@securiton.ch" class="w-12 h-12 flex justify-center items-center rounded-full bg-green">
+                  <img src="../icons/mail_icon.svg" alt="mail">
+                </a>
+                <a class="text-[16px] lg:text-small" href="mailto:brandschutz@securiton.ch">brandschutz@securiton.ch</a>
+              </div>
+              <div class="flex items-center gap-2">
+                <a href="tel:+41589105050" class="w-12 h-12 flex justify-center items-center rounded-full bg-green">
+                  <img src="../icons/phone_icon.svg" alt="phone">
+                </a>
+                <a class="text-[16px] lg:text-small" href="tel:+41589105050">+41 58 910 50 50</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="relative bg-black-300">
+    <button id="scroll-top"
+      class="absolute top-[-32px] right-[20px] lg:right-[69px] flex h-16 w-16 items-center justify-center rounded-full bg-yellow-100">
+      <img src="../icons/arrow_up.svg" alt="arrow up icon" />
+    </button>
+    <div
+      class="flex flex-col sm:flex-row justify-between py-[62px] mx-auto max-w-[335px] sm:max-w-[687px] lg:max-w-[1111px]">
+      <div>
+        <div class="sm:px-10 lg:px-0">
+          <img src="../icons/logo.svg" alt="logo" />
+        </div>
+        <div class="text-user mt-[26px] text-white">
+          <strong>Securiton AG</strong>
+          <br />
+          <span>
+            Alarm- und Sicherheitssysteme
+            <br><br>
+            Hauptsitz <br>
+            Alpenstrasse 20 <br>
+            Postfach 127 <br>
+            CH-3052 Zollikofen <br>
+          </span>
+        </div>
+        <!-- Contact -->
+        <div class="mt-6 flex flex-col gap-2">
+          <div class="flex items-center gap-2">
+            <div class="relative flex h-8 w-8 items-center justify-center rounded-full bg-white">
+              <img src="../icons/phone_icon_black.svg" alt="phone icon" />
+            </div>
+            <div class="text-user text-white">
+              <a href="tel:+41589105050">+41 58 910 50 50</a>
+            </div>
+          </div>
+          <div class="flex items-center gap-2">
+            <div class="relative flex h-8 w-8 items-center justify-center rounded-full bg-white">
+              <img src="../icons/mail_icon_black.svg" alt="Mail icon" />
+            </div>
+            <div class="text-user text-white">
+              <a href="mailto:info@securiton.ch">info@securiton.ch</a>
+            </div>
+          </div>
+        </div>
+        <!-- Soc meida -->
+        <div class="mt-16">
+          <h2 class="text-small font-bold text-white">Join us on Social Media</h2>
+          <div class="mt-6 flex gap-2">
+            <a class="flex" href="#">
+              <img class="lol" src="../icons/linkedin_white.svg" alt="xing logo">
+            </a>
+            <a class="flex" href="#">
+              <img src="../icons/xing_white.svg" alt="xing logo">
+            </a>
+            <a class="flex" href="#">
+              <img src="../icons/yt_white.svg" alt="xing logo">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="pt-[62px] max-w-[350px]">
+        <h2 class="text-small font-bold text-white">Anmeldung Newsletter</h2>
+        <p class="mt-2 block text-small text-white">
+          Lorem ipsum dolor sit amet, id putent <br>
+          fastidii per, ne eos dolores cotidieque. Cu <br>
+          posse legendos recteque pri.
+        </p>
+        <input class="mt-6 w-full h-14 border-0 text-black-100 text-lg placeholder:text-[#848D94] placeholder:uppercase"
+          type="text" placeholder="Ihre Email Adresse">
+        <button class="mt-6 px-8 py-[18px] border border-white text-white uppercase">Eintragen</button>
+      </div>
+    </div>
+    <div class="bg-black-200 px-5 py-6 sm:px-10 lg:px-0">
+      <div
+        class="flex flex-col sm:flex-row justify-between mx-auto max-w-[335px] sm:max-w-[687px] lg:max-w-[1111px] text-user text-white">
+        <ul class="flex justify-between sm:gap-12">
+          <li>
+            <a href="#">Impressum</a>
+          </li>
+          <li>
+            <a href="#">AGB</a>
+          </li>
+          <li>
+            <a href="#">Datenschutzerklärung</a>
+          </li>
+        </ul>
+        <span class="mt-6igm sm:mt-0 text-[12px] lg:text-[14px]">Copyrights © 2023 All Rights Reserved Securiton
+          AG</span>
+      </div>
+    </div>
+  </footer>
+
+  <div id="screen-size" class="fixed bottom-5 right-2 w-min rounded-lg bg-slate-400 p-1">
+    120px
+  </div>
+  <script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script type="module" src="../js/main.js"></script>
+  <script src="../js/swiper-init.js"></script>
+</body>
+
+</html>
