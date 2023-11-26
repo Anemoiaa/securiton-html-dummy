@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link href="../css/main.css" rel="stylesheet" />
+  <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+  <title>Securiton | News Übersicht</title>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="relative flex h-14 items-center justify-between">
+    <div
+      class="flex h-full w-full items-center justify-between bg-green pl-6 pr-5 lg:px-6 xl:pl-[144px] xl:pr-16 2xl:pl-[264px] 2xl:pr-[124px]">
+      <!-- Logo -->
+      <div>
+        <img src="../icons/logo.svg" alt="logo" />
+      </div>
+      <div class="flex items-center self-stretch">
+        <!-- Burger menu -->
+        <button class="burger-btn flex items-center lg:hidden">
+          <span
+            class="mr-[7px] hidden text-sm font-normal uppercase leading-[1.2] tracking-[0.7px] text-white md:block lg:hidden">
+            menu
+          </span>
+          <img src="../icons/burger_menu_closed.svg" alt="burger menu icon" />
+        </button>
+        <button class="burger-btn hidden flex items-center lg:hidden">
+          <img src="../icons/burger_menu_open.svg" alt="burger menu icon" />
+        </button>
+        <!-- Menu items -->
+        <ul class="burger-menu hidden lg:flex">
+          <li class="flex items-center menu-hover">
+            <button class="uppercase">
+              <span>
+                Produkte
+              </span>
+              <img class="lg:hidden" src="../icons/arrow-r.svg" alt="arrow right">
+            </button>
+          </li>
+          <li class="flex items-center menu-hover">
+            <button class="uppercase">
+              <span>Dienstleistungen</span>
+              <img class="lg:hidden" src="../icons/arrow-r.svg" alt="arrow right">
+            </button>
+          </li>
+          <li class="flex items-center menu-hover" id="mega-menu-filter-btn"
+            data-dropdown-toggle="mega-menu-dropdown-branchen">
+            <button class="uppercase">
+              <span>Branchen & anwendungen</span>
+              <img class="lg:hidden" src="../icons/arrow-r.svg" alt="arrow right">
+            </button>
+            <div id="mega-menu-dropdown-branchen" class="relative !top-[-10px] z-20 hidden w-full bg-lightgray-100">
+              <div class="pt-10 pb-12 w-full">
+                <div class="px-5 lg:px-0 lg:mx-auto max-w-[1111px] flex flex-col lg:flex-row lg:gap-[95px]"
+                  aria-labelledby="mega-menu-dropdown-branchen-btn">
+                  <div>
+                    <h2 class="text-small font-semibold text-green">BRANCHEN</h2>
+                    <ul class="mt-6 flex flex-col gap-4 text-small text-black-200">
+                      <li class="hover:text-green"><a href="#">Hotels</a></li>
+                      <li class="hover:text-green"><a href="#">Casinos</a></li>
+                      <li class="hover:text-green"><a href="#">Handel</a></li>
+                      <li class="hover:text-green"><a href="#">Hotels</a></li>
+                      <li class="hover:text-green"><a href="#">Informatik</a></li>
+                      <li class="hover:text-green"><a href="#">Kommunikation</a></li>
+                      <li class="hover:text-green"><a href="#">Lagerhäuser</a></li>
+                      <li class="hover:text-green"><a href="#">Nahrungsmittelindustire</a></li>
+                      <li class="hover:text-green"><a href="#">Pharma & Chemie</a></li>
+                    </ul>
+                    <a class="mt-[40px] flex w-full items-center gap-4 text-base font-normal uppercase leading-[19px] tracking-[1.6px] text-green"
+                      href="#">
+                      alle branchen
+                      <img src="../icons/arrow_right.svg" alt="arrow icon">
+                    </a>
+                  </div>
+
+                  <div>
+                    <h2 class="text-small font-semibold text-green">ANWENDUNGEN</h2>
+                    <ul class="mt-6 flex flex-col gap-4 text-small text-black-200">
+                      <li class="hover:text-green"><a href="#">Museen</a></li>
+                      <li class="hover:text-green"><a href="#">Öffentliche Gebäude</a></li>
+                      <li class="hover:text-green"><a href="#">Post</a></li>
+                      <li class="hover:text-green"><a href="#">Tunnels</a></li>
+                      <li class="hover:text-green"><a href="#">Universitäten</a></li>
+                      <li class="hover:text-green"><a href="#">Verkehr</a></li>
+                      <li class="hover:text-green"><a href="#">Mobiler Objektschutz</a></li>
+                      <li class="hover:text-green"><a href="#">Stadion</a></li>
+                      <li class="hover:text-green"><a href="#">Forschung</a></li>
+                    </ul>
+                    <a class="mt-[40px] flex w-full items-center gap-4 text-base font-normal uppercase leading-[19px] tracking-[1.6px] text-green"
+                      href="#">
+                      alle anwendungen
+                      <img src="../icons/arrow_right.svg" alt="arrow icon">
+                    </a>
+                  </div>
+
+                  <div class="hidden lg:block relative max-w-[355px] max-h-[355px] ml-auto mr-[-50px]">
+                    <img class="w-full h-full object-cover" src="../images/branchen-and-anwendungen.png"
+                      alt="Scientist looks into a microscope">
+                    <span class="absolute bottom-0 w-full h-16 bg-green mix-blend-multiply">
+                    </span>
+                    <h2 class="absolute text-[14px] bottom-[12px] pl-4 text-small uppercase text-white">
+                      Lorem ipsum dolor sit amet, etetur sadipscing elitr
+                    </h2>
+                  </div>
+
+                </div>
+              </div>
+          </li>
+          <li class="flex items-center menu-hover">
+            <button class="uppercase">
+              <span>Über Securiton</span>
+              <img class="lg:hidden" src="../icons/arrow-r.svg" alt="arrow right">
+            </button>
+          </li>
+
+          <div class="md:hidden lg:hidden mt-auto pt-[104px]">
+
+            <div class="flex justify-evenly items-center">
+              <a href="#" class="w-12">
+                <img class="w-full" src="../icons/login.svg" alt="login icon" />
+              </a>
+              <a href="#" class="w-18">
+                <img class="w-full" src="../icons/support_with_shadow.svg" alt="support icon" />
+              </a>
+              <a href="#" class="w-12">
+                <img class="w-full" src="../icons/sprache.svg" alt="sprache icon" />
+              </a>
+            </div>
+
+            <div class="mt-6 relative">
+              <input class="w-full h-14 border-0 text-black-100 text-lg" type="text">
+              <button class="absolute right-[10px] top-[50%] transform translate-y-[-50%] w-6 h-6">
+                <img class="w-full h-full" src="../icons/search.svg" alt="search icon">
+              </button>
+            </div>
+
+            <div class="mt-6 flex justify-center gap-4">
+              <a class="flex" href="#">
+                <img src="../icons/linkedin.svg" alt="xing logo">
+              </a>
+              <a class="flex" href="#">
+                <img src="../icons/xing.svg" alt="xing logo">
+              </a>
+              <a class="flex" href="#">
+                <img src="../icons/yt.svg" alt="xing logo">
+              </a>
+            </div>
+          </div>
+
+        </ul>
+      </div>
+    </div>
+    <!-- Buttons -->
+    <div class="hidden h-full items-center gap-2 bg-white px-6 md:flex">
+      <button class="mr-3">
+        <img src="../icons/search.svg" alt="search icon" />
+      </button>
+      <a href="#">
+        <img src="../icons/support.svg" alt="support icon" />
+      </a>
+      <a href="#">
+        <img src="../icons/login.svg" alt="login icon" />
+      </a>
+      <a href="#">
+        <img src="../icons/sprache.svg" alt="sprache icon" />
+      </a>
+    </div>
+    <div class="absolute -bottom-px left-0 h-px w-full bg-[#F5F5F5]"></div>
+  </nav>
+
+  <main>
+    <div class="w-full h-[441px] sm:h-[375px] lg:h-[600px]">
+      <img class="w-full h-full object-cover" src="../images/news-detail.png" alt="">
+    </div>
+
+    <div class="mx-auto mt-0 lg:mt-6 max-w-[1111px]">
+      <div
+        class="path hidden max-w-[375px] sm:max-w-[687px] lg:max-w-full mx-auto lg:flex items-center gap-4 text-path">
+        <a href="/">
+          <img src="../icons/home.svg" alt="home">
+        </a>
+        <img src="../icons/path_arrow.svg" alt="right arrow">
+        <a href="#">Über Securiton</a>
+        <img src="../icons/path_arrow.svg" alt="right arrow">
+        <a href="#">News</a>
+        <img src="../icons/path_arrow.svg" alt="right arrow">
+        <a href="#">Marriott Hotel Tirana</a>
+      </div>
+    </div>
+
+    <div class="mx-auto mt-10 lg:mt-20 mb-[120px] lg:mb-[152px] max-w-[1111px]">
+
+      <section class="mx-auto max-w-[335px] sm:max-w-[687px] lg:max-w-full">
+        <h2 class="text-heading text-green">Marriott Hotel Tirana</h2>
+        <h3 class="mt-4 max-w-[700px] text-subtitle text-black-100">
+          Anfang 2023 wurde in der albanischen Hauptstadt Tirana das höchste Haus eingeweiht.
+        </h3>
+        <p class="mt-6 sm:mt-10 text-body">
+          Das im 112 Meter hohen Hochhaus untergebrachte Marriott Hotel vertraut dabei auf eine umfangreiche 
+          Brand-schutzlösung von Securiton. Das Hotel ist im drei Jahre zuvor eröffneten Air Albania Stadium inte-griert. 
+          Der Securiton-Brandschutz umfasst das Hotel im Hochhaus, Einkaufsläden sowie die Tief-garage.
+        </p>
+
+      </section>
+
+      <section class="mt-10 lg:mt-20 max-w-full">
+        <div class="mt-6 lg:mt-8 w-full sm:w-screen sm:ml-[calc(-50vw+50%-7px)] bg-lightgray-100">
+          <div
+            class="mx-auto px-3 py-8 flex flex-col items-center sm:flex-row max-w-[335px] sm:max-w-[687px] lg:max-w-[1111px]">
+            <div>
+              <h4 class="text-article-title tracking-[0.62px] text-[31px]">
+                Haben sie Fragen?
+              </h4>
+              <div class="mt-2 text-[20px] lg:text-[25px] text-black-100 leading-[1.3] tracking-[0.5px]">
+                Lassen Sie sichvon unseren Experten Beraten
+              </div>
+              <button 
+                class="mt-10 px-8 py-[18px] whitespace-nowrap bg-green text-base uppercase leading-[1.2] tracking-[1.6px] text-white hover:bg-darkgreen-200"
+                data-modal-btn="contact"
+              >
+                kontakt aufnehmen 
+              </button>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mx-auto max-w-[335px] sm:max-w-[687px] lg:max-w-full">
+        <div class="w-full max-w-[910px] mt-10 lg:mt-20">
+          <p class="pb-[32px] border-b border-lightgray-400">
+            Im Stadtzentrum von Tirana wurde im November 2019 das neue, 
+            prestigeträchtige Fussballstadion Air Albania Stadium eingeweiht. 
+            Drei Jahre später wurde der letzte Mosaikstein in diesem Gesamtkomplex fertiggestellt, 
+            das Marriott Hotel Tirana. Dieses befindet sich an der Eckseite des Stadions, gut sichtbar 
+            als 112 Meter hoher Turm. Bei der Fertigstellung war dies das höchste und erste Gebäude in Albanien mit 
+            einer Höhe über 100 Metern. Das Hotel umfasst 155 Hotelzimmer, Restaurant, Sauna, Dampfbad, Fitnesscenter, 
+            Konferenz- und Veranstaltungsräume sowie eine Tiefgarage.
+          </p>
+          <div class="accordion">
+            <div class="accordion-item py-[24px] border-b border-lightgray-400">
+              <button class="accordion-header w-full flex justify-between  text-body">
+                <span class="text-left">Zuverlässigster Brandschutz</span>
+                <img class="ml-4 w-8 h-8 black-filter" src="../icons/arow_down.svg" alt=""> 
+              </button>
+              <div class="accordion-content hidden mt-4">
+                <p class="text-base tracking-[0.32px]">
+                  Installiert wurde das 100 Prozent redundante Brandmeldesystem SecuriFire – bereits andere 
+                  Marriott-Hotels rund um den Globus vertrauen auf den hochqualitativen Securiton-Brandschutz. 
+                  Im Marriott Hotel Tirana wurden demnach vernetzte SecuriFire-Zentralen installiert. 
+                  Die Branddetektion erfolgt durch hunderte Mehrkriterien-Brandmelder, viele davon mit 
+                  Sprachalarmierung versehen. In den Liftschächten garantieren Ansaugrauchmelder SecuriSmoke 
+                  ASD 535 und in der Tiefgarage linienförmige Wärmemelder SecuriHeat ADW 535 eine schnelle und 
+                  zuverlässige Detektion allfälliger Brände.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mx-auto mt-10 lg:mt-20 max-w-[335px] sm:max-w-[687px] lg:mt-[122px] lg:max-w-full">
+        <h3 class="text-subheading">Verwendete Produkte</h3>
+        <!-- Products -->
+        <div
+          class="mySlider hide-scrollbar mt-[26px] flex snap-x snap-mandatory overflow-x-auto sm:mt-6 sm:snap-none sm:gap-[17px] lg:mt-8 lg:gap-[30px]">
+          <!-- Product 1 -->
+          <a href="#"
+            class="slider__slide relative flex h-[335px] w-[335px] flex-shrink-0 snap-center flex-col transition-all lg:h-[255px] lg:w-[255px]">
+            <div class="h-full w-full overflow-hidden">
+              <img class="h-full w-full object-cover transition-all hover:scale-110"
+                src="../images/products/MicrosoftTeams-image (5).png" alt="image" />
+            </div>
+            <div class="absolute bottom-0 left-0 h-[72px] w-full px-4 pt-4 lg:h-[64px]">
+              <h3
+                class="relative z-10 text-sm font-normal uppercase leading-[21px] tracking-[0.7px] text-white sm:text-base sm:leading-5 sm:tracking-[0.8px] lg:text-sm lg:tracking-[0.7px]">
+                Zutrittskontrolle
+              </h3>
+              <div class="absolute left-0 top-0 h-full w-full bg-green mix-blend-multiply"></div>
+            </div>
+          </a>
+          <!-- Product 2 -->
+          <a href="#"
+            class="slider__slide relative flex h-[335px] w-[335px] flex-shrink-0 snap-center flex-col transition-all lg:h-[255px] lg:w-[255px]">
+            <div class="h-full w-full overflow-hidden">
+              <img class="h-full w-full object-cover transition-all hover:scale-110"
+                src="../images/products/SEC_produkt_XYZ 1.png" alt="image" />
+            </div>
+            <div class="absolute bottom-0 left-0 h-[72px] w-full px-4 pt-4 lg:h-[64px]">
+              <h3
+                class="relative z-10 text-sm font-normal uppercase leading-[21px] tracking-[0.7px] text-white sm:text-base sm:leading-5 sm:tracking-[0.8px] lg:text-sm lg:tracking-[0.7px]">
+                Zutrittskontrolle
+              </h3>
+              <div class="absolute left-0 top-0 h-full w-full bg-green mix-blend-multiply"></div>
+            </div>
+          </a>
+          <!-- Product 3 -->
+          <a href="#"
+            class="slider__slide relative flex h-[335px] w-[335px] flex-shrink-0 snap-center flex-col transition-all lg:h-[255px] lg:w-[255px]">
+            <div class="h-full w-full overflow-hidden">
+              <img class="h-full w-full object-cover transition-all hover:scale-110"
+                src="../images/products/MicrosoftTeams-image (8).png" alt="image" />
+            </div>
+            <div class="absolute bottom-0 left-0 h-[72px] w-full px-4 pt-4 lg:h-[64px]">
+              <h3
+                class="relative z-10 text-sm font-normal uppercase leading-[21px] tracking-[0.7px] text-white sm:text-base sm:leading-5 sm:tracking-[0.8px] lg:text-sm lg:tracking-[0.7px]">
+                Zutrittskontrolle
+              </h3>
+              <div class="absolute left-0 top-0 h-full w-full bg-green mix-blend-multiply"></div>
+            </div>
+          </a>
+          <!-- Product 4 -->
+          <a href="#"
+            class="slider__slide relative flex h-[335px] w-[335px] flex-shrink-0 snap-center flex-col transition-all lg:h-[255px] lg:w-[255px]">
+            <div class="h-full w-full overflow-hidden">
+              <img class="h-full w-full object-cover transition-all hover:scale-110"
+                src="../images/products/MicrosoftTeams-image (6).png" alt="image" />
+            </div>
+            <div class="absolute bottom-0 left-0 h-[72px] w-full px-4 pt-4 lg:h-[64px]">
+              <h3
+                class="relative z-10 text-sm font-normal uppercase leading-[21px] tracking-[0.7px] text-white sm:text-base sm:leading-5 sm:tracking-[0.8px] lg:text-sm lg:tracking-[0.7px]">
+                Zutrittskontrolle
+              </h3>
+              <div class="absolute left-0 top-0 h-full w-full bg-green mix-blend-multiply"></div>
+            </div>
+          </a>
+          <!-- Product 5 -->
+          <a href="#"
+            class="slider__slide relative flex h-[335px] w-[335px] flex-shrink-0 snap-center flex-col transition-all lg:h-[255px] lg:w-[255px]">
+            <div class="h-full w-full overflow-hidden">
+              <img class="h-full w-full object-cover transition-all hover:scale-110"
+                src="../images/products/MicrosoftTeams-image (6).png" alt="image" />
+            </div>
+            <div class="absolute bottom-0 left-0 h-[72px] w-full px-4 pt-4 lg:h-[64px]">
+              <h3
+                class="relative z-10 text-sm font-normal uppercase leading-[21px] tracking-[0.7px] text-white sm:text-base sm:leading-5 sm:tracking-[0.8px] lg:text-sm lg:tracking-[0.7px]">
+                Zutrittskontrolle
+              </h3>
+              <div class="absolute left-0 top-0 h-full w-full bg-green mix-blend-multiply"></div>
+            </div>
+          </a>
+        </div>
+        <button
+          class="slider__button ml-auto mt-4 flex items-center gap-[17px] rounded-full border border-green px-6 py-4 text-green lg:hidden">
+          <div class="slider__label"></div>
+          <img src="../icons/arrow_right.svg" alt="" />
+        </button>
+        <button
+          class="show-all group ml-auto mt-6 hidden items-center gap-[17px] rounded-full border border-green px-6 py-4 uppercase text-green transition-all hover:bg-green hover:text-white lg:mt-12 lg:flex">
+          alle produkte entdecken
+          <img src="../icons/arrow_right_white.svg" class="hidden transition-all group-hover:block" alt="arrow icon" />
+          <img src="../icons/arrow_right.svg" class="transition-all group-hover:hidden" alt="arrow icon" />
+        </button>
+      </section>
+
+      <section class="mx-auto mt-10 lg:mt-20 max-w-[335px] sm:max-w-[687px] lg:mt-[122px] lg:max-w-full">
+        <h3 class="text-subheading">Ähnliche Objekte</h3>
+        <!-- Products -->
+        <div
+          class="mySlider hide-scrollbar mt-[26px] flex snap-x snap-mandatory overflow-x-auto sm:mt-6 sm:snap-none sm:gap-[17px] lg:mt-8 lg:gap-[30px]">
+          <!-- Product 1 -->
+          <a href="#"
+            class="slider__slide relative flex h-[335px] w-[335px] flex-shrink-0 snap-center flex-col transition-all lg:h-[255px] lg:w-[255px]">
+            <div class="h-full w-full overflow-hidden">
+              <img class="h-full w-full object-cover transition-all hover:scale-110"
+                src="../images/products/MicrosoftTeams-image (5).png" alt="image" />
+            </div>
+            <div class="absolute bottom-0 left-0 h-[72px] w-full px-4 pt-4 lg:h-[64px]">
+              <h3
+                class="relative z-10 text-sm font-normal uppercase leading-[21px] tracking-[0.7px] text-white sm:text-base sm:leading-5 sm:tracking-[0.8px] lg:text-sm lg:tracking-[0.7px]">
+                Zutrittskontrolle
+              </h3>
+              <div class="absolute left-0 top-0 h-full w-full bg-green mix-blend-multiply"></div>
+            </div>
+          </a>
+          <!-- Product 2 -->
+          <a href="#"
+            class="slider__slide relative flex h-[335px] w-[335px] flex-shrink-0 snap-center flex-col transition-all lg:h-[255px] lg:w-[255px]">
+            <div class="h-full w-full overflow-hidden">
+              <img class="h-full w-full object-cover transition-all hover:scale-110"
+                src="../images/products/SEC_produkt_XYZ 1.png" alt="image" />
+            </div>
+            <div class="absolute bottom-0 left-0 h-[72px] w-full px-4 pt-4 lg:h-[64px]">
+              <h3
+                class="relative z-10 text-sm font-normal uppercase leading-[21px] tracking-[0.7px] text-white sm:text-base sm:leading-5 sm:tracking-[0.8px] lg:text-sm lg:tracking-[0.7px]">
+                Zutrittskontrolle
+              </h3>
+              <div class="absolute left-0 top-0 h-full w-full bg-green mix-blend-multiply"></div>
+            </div>
+          </a>
+          <!-- Product 3 -->
+          <a href="#"
+            class="slider__slide relative flex h-[335px] w-[335px] flex-shrink-0 snap-center flex-col transition-all lg:h-[255px] lg:w-[255px]">
+            <div class="h-full w-full overflow-hidden">
+              <img class="h-full w-full object-cover transition-all hover:scale-110"
+                src="../images/products/MicrosoftTeams-image (8).png" alt="image" />
+            </div>
+            <div class="absolute bottom-0 left-0 h-[72px] w-full px-4 pt-4 lg:h-[64px]">
+              <h3
+                class="relative z-10 text-sm font-normal uppercase leading-[21px] tracking-[0.7px] text-white sm:text-base sm:leading-5 sm:tracking-[0.8px] lg:text-sm lg:tracking-[0.7px]">
+                Zutrittskontrolle
+              </h3>
+              <div class="absolute left-0 top-0 h-full w-full bg-green mix-blend-multiply"></div>
+            </div>
+          </a>
+          <!-- Product 4 -->
+          <a href="#"
+            class="slider__slide relative flex h-[335px] w-[335px] flex-shrink-0 snap-center flex-col transition-all lg:h-[255px] lg:w-[255px]">
+            <div class="h-full w-full overflow-hidden">
+              <img class="h-full w-full object-cover transition-all hover:scale-110"
+                src="../images/products/MicrosoftTeams-image (6).png" alt="image" />
+            </div>
+            <div class="absolute bottom-0 left-0 h-[72px] w-full px-4 pt-4 lg:h-[64px]">
+              <h3
+                class="relative z-10 text-sm font-normal uppercase leading-[21px] tracking-[0.7px] text-white sm:text-base sm:leading-5 sm:tracking-[0.8px] lg:text-sm lg:tracking-[0.7px]">
+                Zutrittskontrolle
+              </h3>
+              <div class="absolute left-0 top-0 h-full w-full bg-green mix-blend-multiply"></div>
+            </div>
+          </a>
+          <!-- Product 5 -->
+          <a href="#"
+            class="slider__slide relative flex h-[335px] w-[335px] flex-shrink-0 snap-center flex-col transition-all lg:h-[255px] lg:w-[255px]">
+            <div class="h-full w-full overflow-hidden">
+              <img class="h-full w-full object-cover transition-all hover:scale-110"
+                src="../images/products/MicrosoftTeams-image (6).png" alt="image" />
+            </div>
+            <div class="absolute bottom-0 left-0 h-[72px] w-full px-4 pt-4 lg:h-[64px]">
+              <h3
+                class="relative z-10 text-sm font-normal uppercase leading-[21px] tracking-[0.7px] text-white sm:text-base sm:leading-5 sm:tracking-[0.8px] lg:text-sm lg:tracking-[0.7px]">
+                Zutrittskontrolle
+              </h3>
+              <div class="absolute left-0 top-0 h-full w-full bg-green mix-blend-multiply"></div>
+            </div>
+          </a>
+        </div>
+        <button
+          class="slider__button ml-auto mt-4 flex items-center gap-[17px] rounded-full border border-green px-6 py-4 text-green lg:hidden">
+          <div class="slider__label"></div>
+          <img src="../icons/arrow_right.svg" alt="" />
+        </button>
+        <button
+          class="show-all group ml-auto mt-6 hidden items-center gap-[17px] rounded-full border border-green px-6 py-4 uppercase text-green transition-all hover:bg-green hover:text-white lg:mt-12 lg:flex">
+          alle produkte entdecken
+          <img src="../icons/arrow_right_white.svg" class="hidden transition-all group-hover:block" alt="arrow icon" />
+          <img src="../icons/arrow_right.svg" class="transition-all group-hover:hidden" alt="arrow icon" />
+        </button>
+      </section>
+    
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="relative bg-black-300">
+    <button id="scroll-top"
+      class="absolute top-[-32px] right-[20px] lg:right-[69px] flex h-16 w-16 items-center justify-center rounded-full bg-yellow-100">
+      <img src="../icons/arrow_up.svg" alt="arrow up icon" />
+    </button>
+    <div
+      class="flex flex-col sm:flex-row justify-between py-[62px] mx-auto max-w-[335px] sm:max-w-[687px] lg:max-w-[1111px]">
+      <div>
+        <div class="sm:px-10 lg:px-0">
+          <img src="../icons/logo.svg" alt="logo" />
+        </div>
+        <div class="text-user mt-[26px] text-white">
+          <strong>Securiton AG</strong>
+          <br />
+          <span>
+            Alarm- und Sicherheitssysteme
+            <br><br>
+            Hauptsitz <br>
+            Alpenstrasse 20 <br>
+            Postfach 127 <br>
+            CH-3052 Zollikofen <br>
+          </span>
+        </div>
+        <!-- Contact -->
+        <div class="mt-6 flex flex-col gap-2">
+          <div class="flex items-center gap-2">
+            <div class="relative flex h-8 w-8 items-center justify-center rounded-full bg-white">
+              <img src="../icons/phone_icon_black.svg" alt="phone icon" />
+            </div>
+            <div class="text-user text-white">
+              <a href="tel:+41589105050">+41 58 910 50 50</a>
+            </div>
+          </div>
+          <div class="flex items-center gap-2">
+            <div class="relative flex h-8 w-8 items-center justify-center rounded-full bg-white">
+              <img src="../icons/mail_icon_black.svg" alt="Mail icon" />
+            </div>
+            <div class="text-user text-white">
+              <a href="mailto:info@securiton.ch">info@securiton.ch</a>
+            </div>
+          </div>
+        </div>
+        <!-- Soc meida -->
+        <div class="mt-16">
+          <h2 class="text-small font-bold text-white">Join us on Social Media</h2>
+          <div class="mt-6 flex gap-2">
+            <a class="flex" href="#">
+              <img class="lol" src="../icons/linkedin_white.svg" alt="xing logo">
+            </a>
+            <a class="flex" href="#">
+              <img src="../icons/xing_white.svg" alt="xing logo">
+            </a>
+            <a class="flex" href="#">
+              <img src="../icons/yt_white.svg" alt="xing logo">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="pt-[62px] max-w-[350px]">
+        <h2 class="text-small font-bold text-white">Anmeldung Newsletter</h2>
+        <p class="mt-2 block text-small text-white">
+          Lorem ipsum dolor sit amet, id putent <br>
+          fastidii per, ne eos dolores cotidieque. Cu <br>
+          posse legendos recteque pri.
+        </p>
+        <input class="mt-6 w-full h-14 border-0 text-black-100 text-lg placeholder:text-[#848D94] placeholder:uppercase"
+          type="text" placeholder="Ihre Email Adresse">
+        <button class="mt-6 px-8 py-[18px] border border-white text-white uppercase">Eintragen</button>
+      </div>
+    </div>
+    <div class="bg-black-200 px-5 py-6 sm:px-10 lg:px-0">
+      <div
+        class="flex flex-col sm:flex-row justify-between mx-auto max-w-[335px] sm:max-w-[687px] lg:max-w-[1111px] text-user text-white">
+        <ul class="flex justify-between sm:gap-12">
+          <li>
+            <a href="#">Impressum</a>
+          </li>
+          <li>
+            <a href="#">AGB</a>
+          </li>
+          <li>
+            <a href="#">Datenschutzerklärung</a>
+          </li>
+        </ul>
+        <span class="mt-6igm sm:mt-0 text-[12px] lg:text-[14px]">Copyrights © 2023 All Rights Reserved Securiton
+          AG</span>
+      </div>
+    </div>
+  </footer>
+
+  <div id="screen-size" class="fixed bottom-5 right-2 w-min rounded-lg bg-slate-400 p-1">
+    120px
+  </div>
+  <script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script type="module" src="../js/main.js"></script>
+  <script src="../js/swiper-init.js"></script>
+</body>
+
+</html>
