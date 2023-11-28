@@ -195,7 +195,7 @@
       <section class="mx-auto max-w-[335px] sm:max-w-[687px] lg:max-w-full">
         <h2 class="text-heading text-green">Service Center</h2>
         <div class="mt-4 h-1 w-[72px] bg-yellow-100 sm:mt-[18px] lg:mt-4"></div>
-        <div class="mt-6 text-body text-black-100">
+        <div class="mt-[24px] lg:mt-10 text-body text-black-100">
           <p>
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
             labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
@@ -245,7 +245,7 @@
         <!-- Cards Desktop -->
         <div class="mt-4 hidden grid-cols-1 gap-2 sm:mt-6 sm:grid-cols-3 sm:gap-5 md:gap-[31px] lg:mt-8 lg:grid">
           <!-- Card 1 -->
-          <a class="card sm:h-[216px] sm:w-[216px] lg:h-[350px] lg:w-[350px]" href="#">
+          <a href="#" class="card card-service sm:h-[216px] sm:w-[216px] lg:h-[350px] lg:w-[350px]" href="#">
             <div class="content">
               <div
                 class="front flex w-full items-center gap-5 bg-lightgray-200 px-[19px] py-3 sm:h-[216px] sm:w-[216px] sm:flex-col sm:justify-center sm:gap-6 lg:h-[350px] lg:w-[350px]">
@@ -271,7 +271,7 @@
             </div>
           </a>
           <!-- Card 2 -->
-          <a href="#" class="card sm:h-[216px] sm:w-[216px] lg:h-[350px] lg:w-[350px]">
+          <a href="#" class="card card-service sm:h-[216px] sm:w-[216px] lg:h-[350px] lg:w-[350px]">
             <div class="content">
               <div
                 class="front flex w-full items-center gap-5 bg-lightgray-200 px-[19px] py-3 sm:h-[216px] sm:w-[216px] sm:flex-col sm:justify-center sm:gap-6 lg:h-[350px] lg:w-[350px]">
@@ -297,7 +297,7 @@
             </div>
           </a>
           <!-- Card 3 -->
-          <a href="#" class="card sm:h-[216px] sm:w-[216px] lg:h-[350px] lg:w-[350px]">
+          <a href="#" class="card card-service sm:h-[216px] sm:w-[216px] lg:h-[350px] lg:w-[350px]">
             <div class="content">
               <div
                 class="front flex w-full items-center gap-5 bg-lightgray-200 px-[19px] py-3 sm:h-[216px] sm:w-[216px] sm:flex-col sm:justify-center sm:gap-6 lg:h-[350px] lg:w-[350px]">
@@ -323,7 +323,7 @@
             </div>
           </a>
           <!-- Card 4 -->
-          <a href="#" class="card sm:h-[216px] sm:w-[216px] lg:h-[350px] lg:w-[350px]">
+          <a href="#" class="card card-service sm:h-[216px] sm:w-[216px] lg:h-[350px] lg:w-[350px]">
             <div class="content">
               <div
                 class="front flex w-full items-center gap-5 bg-lightgray-200 px-[19px] py-3 sm:h-[216px] sm:w-[216px] sm:flex-col sm:justify-center sm:gap-6 lg:h-[350px] lg:w-[350px]">
@@ -382,13 +382,8 @@
   </main>
 
   <!-- Footer -->
-  <footer class="relative bg-black-300">
-    <button id="scroll-top"
-      class="absolute top-[-32px] right-[20px] lg:right-[69px] flex h-16 w-16 items-center justify-center rounded-full bg-yellow-100">
-      <img src="../icons/arrow_up.svg" alt="arrow up icon" />
-    </button>
-    <div
-      class="flex flex-col sm:flex-row justify-between py-[62px] mx-auto max-w-[335px] sm:max-w-[687px] lg:max-w-[1111px]">
+  <footer class="bg-black-300">
+    <div class="flex flex-col sm:flex-row justify-between py-[62px] mx-auto max-w-[335px] sm:max-w-[687px] lg:max-w-[1111px]">
       <div>
         <div class="sm:px-10 lg:px-0">
           <img src="../icons/logo.svg" alt="logo" />
@@ -440,24 +435,19 @@
           </div>
         </div>
       </div>
-      <div class="pt-[62px] max-w-[350px]">
+      <div class="mt-[51px] max-w-[350px]">
         <h2 class="text-small font-bold text-white">Anmeldung Newsletter</h2>
-        <div class="mt-2 block text-small text-white">
-          <p>
-            Lorem ipsum dolor sit amet, id putent <br>
-            fastidii per, ne eos dolores cotidieque. Cu <br>
-            posse legendos recteque pri.
-          </p>
-        </div>
-
-        <input class="mt-6 w-full h-14 border-0 text-black-100 text-lg placeholder:text-[#848D94] placeholder:uppercase"
-          type="text" placeholder="Ihre Email Adresse">
+        <p class="mt-2 block text-small text-white">
+          Lorem ipsum dolor sit amet, id putent <br> 
+          fastidii per, ne eos dolores cotidieque. Cu <br> 
+          posse legendos recteque pri.
+        </p>
+        <input class="mt-6 w-full h-14 border-0 text-black-100 text-lg placeholder:text-[#848D94] placeholder:uppercase" type="text" placeholder="Ihre Email Adresse">
         <button class="mt-6 px-8 py-[18px] border border-white text-white uppercase">Eintragen</button>
       </div>
     </div>
     <div class="bg-black-200 px-5 py-6 sm:px-10 lg:px-0">
-      <div
-        class="flex flex-col sm:flex-row justify-between mx-auto max-w-[335px] sm:max-w-[687px] lg:max-w-[1111px] text-user text-white">
+      <div class="flex flex-col sm:flex-row justify-between mx-auto max-w-[335px] sm:max-w-[687px] lg:max-w-[1111px] text-user text-white">
         <ul class="flex justify-between sm:gap-12">
           <li>
             <a href="#">Impressum</a>
@@ -469,8 +459,7 @@
             <a href="#">Datenschutzerklärung</a>
           </li>
         </ul>
-        <span class="mt-6igm sm:mt-0 text-[12px] lg:text-[14px]">Copyrights © 2023 All Rights Reserved Securiton
-          AG</span>
+        <span class="mt-6 sm:mt-0 text-[12px] lg:text-[14px]">Copyrights © 2023 All Rights Reserved Securiton AG</span>
       </div>
     </div>
   </footer>

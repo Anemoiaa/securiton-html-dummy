@@ -101,7 +101,7 @@
                       alt="Scientist looks into a microscope">
                     <span class="absolute bottom-0 w-full h-16 bg-green mix-blend-multiply">
                     </span>
-                    <h2 class="absolute text-[14px] bottom-[12px] pl-4 text-small uppercase text-white">
+                    <h2 class="absolute text-[14px] bottom-[12px] pl-4 text-sm font-normal uppercase leading-[1.5] tracking-[1.4px] text-white sm:text-base sm:leading-[1.25] sm:tracking-[0.8px] lg:text-sm lg:tracking-[1.4px] lg:leading-[1.28]">
                       Lorem ipsum dolor sit amet, etetur sadipscing elitr
                     </h2>
                   </div>
@@ -183,7 +183,7 @@
       </div>
 
       <section class="mx-auto lg:mt-[80px] max-w-[335px] sm:max-w-[687px] lg:max-w-full">
-        <h1 class="text-heading text-green">
+        <h1 class="block max-w-[313px] sm:max-w-0 break-words sm:break-normal	text-heading text-green">
           Erfolgsgeschichten
         </h1>
         <div class="mt-4 h-1 w-[72px] bg-yellow-100 sm:mt-[18px] lg:mt-4"></div>
@@ -203,7 +203,7 @@
             
             <div class="accordion-item"> 
               <button class="accordion-header w-full flex justify-between items-center bg-lightgray-100 px-4 py-[15px] text-left" data-accordion-type="filter">
-                <span>Filter</span>
+                <span class="text-[16px] tracking-[0.32px]">Filter</span>
                 <img class="rotate-90" src="../icons/arrow-r.svg" alt="arrow right">
               </button>
               <div class="accordion-content hidden pt-[15px] pb-[30px] px-4 bg-[#E6E8EA]">
@@ -267,28 +267,37 @@
         <div class="mt-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           <div class="relative w-full sm:max-w-[340px] h-[342px] lg:max-w-[359px] h-[359px]">
             <img class="w-full h-full object-cover" src="../images/filter/1.png" alt="image">
-            <span class="absolute bottom-0 w-full h-16 bg-green mix-blend-multiply"></span>
-            <h3 class="absolute text-[14px] bottom-[30px]  px-4 text-small uppercase text-white">
-              BäreTower
-            </h3>
+            <div class="absolute bottom-0 left-0 h-[64px] w-full px-4 pt-4">
+              <h3
+                class="relative z-10 text-sm font-normal uppercase leading-[21px] tracking-[0.7px] text-white sm:text-base sm:leading-5 sm:tracking-[0.8px] lg:text-sm lg:tracking-[0.7px]">
+                BäreTower
+              </h3>
+              <div class="absolute left-0 top-0 h-full w-full bg-green mix-blend-multiply"></div>
+            </div>
           </div>
           <div class="relative w-full sm:max-w-[340px] h-[342px] lg:max-w-[359px] h-[359px]">
             <img class="w-full h-full object-cover" src="../images/filter/2.png" alt="image">
-            <span class="absolute bottom-0 w-full h-16 bg-green mix-blend-multiply"></span>
-            <h3 class="absolute text-[14px] bottom-[30px]  px-4 text-small uppercase text-white">
-              WIE EINE FUSSBALLMANNSCHAFT
-            </h3>
+            <div class="absolute bottom-0 left-0 h-[64px] w-full px-4 pt-4">
+              <h3
+                class="relative z-10 text-sm font-normal uppercase leading-[21px] tracking-[0.7px] text-white sm:text-base sm:leading-5 sm:tracking-[0.8px] lg:text-sm lg:tracking-[0.7px]">
+                WIE EINE FUSSBALLMANNSCHAFT
+              </h3>
+              <div class="absolute left-0 top-0 h-full w-full bg-green mix-blend-multiply"></div>
+            </div>
           </div>
           <div class="relative w-full sm:max-w-[340px] h-[342px] lg:max-w-[359px] h-[359px]">
             <img class="w-full h-full object-cover" src="../images/filter/3.png" alt="image">
-            <span class="absolute bottom-0 w-full h-16 bg-green mix-blend-multiply"></span>
-            <h3 class="absolute text-[14px] bottom-[30px]  px-4 text-small uppercase text-white">
-              SWISS LIFE ARENA
-            </h3>
+            <div class="absolute bottom-0 left-0 h-[64px] w-full px-4 pt-4">
+              <h3
+                class="relative z-10 text-sm font-normal uppercase leading-[21px] tracking-[0.7px] text-white sm:text-base sm:leading-5 sm:tracking-[0.8px] lg:text-sm lg:tracking-[0.7px]">
+                SWISS LIFE ARENA
+              </h3>
+              <div class="absolute left-0 top-0 h-full w-full bg-green mix-blend-multiply"></div>
+            </div>
           </div>
         </div>
 
-        <a href="#" class="block w-fit mt-8 sm:mt-12 lg:mt-20 sm:mx-auto px-6 py-[14px] rounded-[22px] text-white sm:text-green bg-green sm:bg-transparent sm:border sm:border-green uppercase">
+        <a href="#" class="block w-fit ml-auto mt-8 sm:mt-12 lg:mt-20 sm:mx-auto px-6 py-[14px] rounded-[22px] text-[14px] sm:text-[16px] leading-[1.2] tracking-[1.4px] sm:tracking-[1.6px] text-white sm:text-green bg-green sm:bg-transparent sm:border sm:border-green uppercase">
           MEHR erfolgsgeschichten
         </a>
 
@@ -331,11 +340,11 @@
   <!-- Footer -->
   <footer class="relative bg-black-300">
     <button id="scroll-top"
-      class="absolute top-[-32px] right-[20px] lg:right-[69px] flex h-16 w-16 items-center justify-center rounded-full bg-yellow-100">
+      class="absolute top-[-32px] right-[20px] sm:right-[40px] lg:right-[69px] flex h-16 w-16 items-center justify-center rounded-full bg-yellow-100">
       <img src="../icons/arrow_up.svg" alt="arrow up icon" />
     </button>
-    <div
-      class="flex flex-col sm:flex-row justify-between py-[62px] mx-auto max-w-[335px] sm:max-w-[687px] lg:max-w-[1111px]">
+
+    <div class="flex flex-col sm:flex-row justify-between py-[62px] mx-auto max-w-[335px] sm:max-w-[687px] lg:max-w-[1111px]">
       <div>
         <div class="sm:px-10 lg:px-0">
           <img src="../icons/logo.svg" alt="logo" />
@@ -387,23 +396,19 @@
           </div>
         </div>
       </div>
-      <div class="pt-[62px] max-w-[350px]">
+      <div class="mt-[51px] max-w-[350px]">
         <h2 class="text-small font-bold text-white">Anmeldung Newsletter</h2>
-        <div class="mt-2 block text-small text-white">
-          <p>
-            Lorem ipsum dolor sit amet, id putent <br>
-            fastidii per, ne eos dolores cotidieque. Cu <br>
-            posse legendos recteque pri.
-          </p>
-        </div>
-        <input class="mt-6 w-full h-14 border-0 text-black-100 text-lg placeholder:text-[#848D94] placeholder:uppercase"
-          type="text" placeholder="Ihre Email Adresse">
+        <p class="mt-2 block text-small text-white">
+          Lorem ipsum dolor sit amet, id putent <br> 
+          fastidii per, ne eos dolores cotidieque. Cu <br> 
+          posse legendos recteque pri.
+        </p>
+        <input class="mt-6 w-full h-14 border-0 text-black-100 text-lg placeholder:text-[#848D94] placeholder:uppercase" type="text" placeholder="Ihre Email Adresse">
         <button class="mt-6 px-8 py-[18px] border border-white text-white uppercase">Eintragen</button>
       </div>
     </div>
     <div class="bg-black-200 px-5 py-6 sm:px-10 lg:px-0">
-      <div
-        class="flex flex-col sm:flex-row justify-between mx-auto max-w-[335px] sm:max-w-[687px] lg:max-w-[1111px] text-user text-white">
+      <div class="flex flex-col sm:flex-row justify-between mx-auto max-w-[335px] sm:max-w-[687px] lg:max-w-[1111px] text-user text-white">
         <ul class="flex justify-between sm:gap-12">
           <li>
             <a href="#">Impressum</a>
@@ -415,8 +420,7 @@
             <a href="#">Datenschutzerklärung</a>
           </li>
         </ul>
-        <span class="mt-6igm sm:mt-0 text-[12px] lg:text-[14px]">Copyrights © 2023 All Rights Reserved Securiton
-          AG</span>
+        <span class="mt-6 sm:mt-0 text-[12px] lg:text-[14px]">Copyrights © 2023 All Rights Reserved Securiton AG</span>
       </div>
     </div>
   </footer>

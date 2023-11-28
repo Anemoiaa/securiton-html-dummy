@@ -10,9 +10,8 @@ function initAccordions() {
         if(!accordionType){
             const icon = header.querySelector('img')
             
-            content.classList.toggle('hidden');
+            content.classList.toggle('!max-h-[600px]');
             icon.classList.toggle('rotate-180');
-            icon.classList.toggle('black-filter');
             header.classList.toggle('text-green');
 
         } else if(accordionType === 'filter') {
